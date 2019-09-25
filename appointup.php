@@ -380,7 +380,7 @@ ob_clean();
 
 require ( plugin_dir_path(__FILE__) . 'appointup-plugin-update-checker/plugin-update-checker.php' );
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/MagnetBrains/AppointUp',
+	'https://github.com/MagnetBrains/appointup',
 	__FILE__,
 	'appointup'
 );
