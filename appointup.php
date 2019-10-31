@@ -3,7 +3,7 @@
   Plugin Name: AppointUp Plugin
   Plugin URI: https://www.inkthemes.com/
   Description: With AppointUp Plugin you can book the appointment of the clients directly through your Website. Moreover,  the clients will be notified instantly regarding the appointment details.
-  Version: 1.0.4
+  Version: 1.0.5
   Author: inkthemes
   Author URI: https://www.inkthemes.com/
   License: GPL2
@@ -65,10 +65,16 @@ class Ink_Appointment {
         }
 
         wp_enqueue_script('jquery-ui-cal', $this->dir_url . 'ink-admin/js/cal-front/jquery-ui.js', array('jquery'));
-        wp_enqueue_script('ink-required', $this->dir_url . 'ink-admin/js/ink-required.js', array('jquery', 'wp-color-picker'));
         wp_enqueue_script('inkappointment-jquery-form-val-lib', '//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js');
         wp_enqueue_script('inkappointment-jquery-form-validation', $this->dir_url . 'ink-admin/js/form-validation.js', array('jquery'));
         wp_enqueue_script('google-captcha', 'https://www.google.com/recaptcha/api.js');
+        if( is_admin() ) { 
+        // Add the color picker css file       
+        wp_enqueue_style( 'wp-color-picker' ); 
+         
+        // Include our custom jQuery file with WordPress Color Picker dependency
+        wp_enqueue_script( 'ink-required', $this->dir_url . 'ink-admin/js/ink-required.js', array( 'wp-color-picker' ), false, false ); 
+    }
 
         if (get_option('apt_form_background_color') != '') :
             $color = get_option('apt_form_background_color');
