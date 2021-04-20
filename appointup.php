@@ -3,7 +3,7 @@
   Plugin Name: AppointUp Plugin
   Plugin URI: https://www.inkthemes.com/
   Description: With AppointUp Plugin you can book the appointment of the clients directly through your Website. Moreover,  the clients will be notified instantly regarding the appointment details.
-  Version: 1.0.5
+  Version: 1.0.6
   Author: inkthemes
   Author URI: https://www.inkthemes.com/
   License: GPL2

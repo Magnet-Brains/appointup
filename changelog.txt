@@ -1,6 +1,11 @@
             == AppointUp Plugin ==
 
             ========== Changelog ===========
+= Version: 1.0.6 =
+             ==========================
+1. Fixed Customizer loading loop issue.
+
+            ========== Changelog ===========
 = Version: 1.0.5 =
              ==========================
 1. Fixed some bugs.
